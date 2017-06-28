@@ -19,7 +19,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: 500px;
+  min-width: 800px;
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   -webkit-text-stroke-width: 0px;
@@ -42,19 +42,19 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 500px;
+  min-width: 800px;
   height: 100px;
   background: rgb(43,43,43);
   transition: .5s;
   z-index: -1;
 }
 .mid-banner {
-  min-width: 500px;
   position: relative;
   float: left;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 800px;
   height: 50px;
   background: transparent;
   transition: .5s;
@@ -67,6 +67,7 @@ a {
   top: 100px;
   left: 0;
   width: 100%;
+  min-width: 800px;
   height: 48px;
   border-top: 1px solid rgba(100,100,100,.5);
   border-bottom: 1px solid white;
@@ -118,6 +119,7 @@ a {
   float: left;
   top: 0;
   left: 0;
+  min-width: 800px;
   width: 100%;
   height: calc(100% - 150px);
   background: rgb(2,12,28);
@@ -291,7 +293,7 @@ a.song-bubble-inner:hover {
   position: fixed;
   margin-left: 30px;
   top: 0;
-  width: 100px;
+  width: 100%;
   height: 100px;
   z-index: 1;
   display: flex;
@@ -304,6 +306,17 @@ a.song-bubble-inner:hover {
   margin: 0 auto;
   background-image: url('/images/team-blue-logo.jpg');
   background-size: 100%;
+} .logo-gutter {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: calc(100% - 300px);
+} .logo-menu {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 200px;
+  background: blue;
 }
 
 
