@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
 var isLand = false
 
 $('.landing-toggle-button').click(function(){
@@ -23,8 +28,6 @@ $(".mid-banner").click(function(){
   bannerH = (bannerH + 100) % 200
   var topBannerTop = (0 - ((bannerH + 100) % 200))
   document.getElementById('top-banner').style.height = (bannerH + "px")
-  document.getElementById('logo-container').style.top = (topBannerTop + "px")
-  document.getElementById('designed-by-container').style.top = (topBannerTop + "px")
   document.getElementById('main').style.height = "calc(100% - " + (bannerH + 50) + "px)"
   document.getElementById('mid-banner-text').style.top = (bannerH + "px")
   document.getElementById('mid-banner-breadcrumb').style.top = (bannerH + "px")
@@ -36,8 +39,6 @@ var selectedSong = null;
 
 function collapseMenu() {
   document.getElementById('top-banner').style.height = "0px"
-  document.getElementById('logo-container').style.top = "-100px"
-  document.getElementById('designed-by-container').style.top = "-100px"
   document.getElementById('main').style.height = "calc(100% - 50px)"
   document.getElementById('mid-banner-text').style.top = "0px"
   document.getElementById('mid-banner-breadcrumb').style.top = "0px"

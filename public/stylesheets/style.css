@@ -42,7 +42,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 800px;
   height: 100px;
   background: rgb(43,43,43);
   transition: .5s;
@@ -93,7 +92,6 @@ a {
   align-items: center;
 }
 .breadcrumb-item {
-  /*margin-left: 10px;*/
   margin: 0 auto;
   color: rgb(14,255,219);
   color: rgb(220,220,220);
@@ -112,8 +110,6 @@ a {
 }
 
 
-/*234,11,9*/
-
 #main {
   position: relative;
   float: left;
@@ -123,7 +119,6 @@ a {
   width: 100%;
   height: calc(100% - 150px);
   background: rgb(2,12,28);
-  /*background: linear-gradient(to bottom, rgb(14,255,219), rgb(89,130,252));*/
   background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
   transition: .5s;
   overflow-x: scroll;
@@ -144,7 +139,6 @@ a {
 
 
 .album-bubble {
-  /*animation: bubble 3s infinite;*/
   position: relative;
   display: inline-block;
   margin-top: 50px;
@@ -160,13 +154,6 @@ a {
   transition: 2s;
   margin-left: 50px;
   margin-right: 50px;
-
-} a.album-bubble:hover {
-  border: 5px solid rgba(200,240,255,.1);
-  background: radial-gradient(
-    31px at 30% 40%,
-    rgba(200,240,255,.9),
-    rgba(255,255,255,.4));
 }
 .selected-album-bubble {
   width: 20px;
@@ -304,7 +291,8 @@ a.song-bubble-inner:hover {
   width: 70px;
   height: 70px;
   margin: 0 auto;
-  background-image: url('/images/team-blue-logo.jpg');
+  top: 0;
+  /*background-image: url('/images/team-blue-logo.jpg');*/
   background-size: 100%;
 } .logo-gutter {
   position: relative;
@@ -318,7 +306,14 @@ a.song-bubble-inner:hover {
   width: 200px;
   background: blue;
 }
-
+.logo-for-land {
+ width: 70px;
+ height: 70px;
+ margin: 0 auto;
+ top: 0;
+ /*background-image: url('/images/team-blue-logo.jpg');*/
+ background-size: 100%;
+}
 
 
 #designed-by-container {
@@ -467,8 +462,18 @@ a.song-bubble-inner:hover {
   background-size: 100%;
   z-index: 21;
 }
+
+
+
+#land-main-search-gutter {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: white;
+}
 #land-main-search {
-  width: 100%;
+  width: calc(100% - 200px);
   height: 200px;
   top: 0;
   position: relative;
