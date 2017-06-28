@@ -1,0 +1,489 @@
+
+
+
+/*
+
+colors
+-------------------
+Black     - #2b2b2b rgb(43,43,43)
+Cyan      - #0effdb rgb(14,255,219)
+Deep blue - #5982fc rgb(89,130,252)
+Orange    - #ffab08 rgb(255,171,8)
+Pink!     - #ff5196 rgb(255,81,150)
+
+*/
+html {
+  background: rgb(43,43,43);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 500px;
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  -webkit-text-stroke-width: 0px;
+  overflow: hidden;
+  /*background: rgb(43,43,43);*/
+
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#top-banner {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 500px;
+  height: 100px;
+  background: rgb(43,43,43);
+  transition: .5s;
+  z-index: -1;
+}
+.mid-banner {
+  min-width: 500px;
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  transition: .5s;
+  z-index: 3;
+}
+#mid-banner-text {
+  /* a replica of mid-banner, without the link */
+  position: fixed;
+  clear: both;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  border-top: 1px solid rgba(100,100,100,.5);
+  border-bottom: 1px solid white;
+  transition: .5s;
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#mid-banner-breadcrumb {
+  /* a replica of mid-banner, without the link */
+  position: fixed;
+  clear: both;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  transition: .5s;
+  z-index: 2;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.breadcrumb-item {
+  /*margin-left: 10px;*/
+  margin: 0 auto;
+  color: rgb(14,255,219);
+  color: rgb(220,220,220);
+  font-size: 14pt;
+}
+.breadcrumb-seperator {
+  width: 1px;
+  height: 50%;
+  background: white;
+  margin-left: 10px;
+}
+.following {
+  float: left;
+  font-size: 8pt;
+  color: blue;
+}
+
+
+/*234,11,9*/
+
+#main {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+  background: rgb(2,12,28);
+  /*background: linear-gradient(to bottom, rgb(14,255,219), rgb(89,130,252));*/
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
+  transition: .5s;
+  overflow-x: scroll;
+}
+
+.abyss {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+  display: inline-block;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+
+
+.album-bubble {
+  /*animation: bubble 3s infinite;*/
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 3px solid rgba(200,240,255,.1);
+  background: radial-gradient(
+    30px at 30% 40%,
+    rgba(200,240,255,.7),
+    rgba(255,255,255,.2));
+  overflow: hidden;
+  transition: 2s;
+  margin-left: 50px;
+  margin-right: 50px;
+
+} a.album-bubble:hover {
+  border: 5px solid rgba(200,240,255,.1);
+  background: radial-gradient(
+    31px at 30% 40%,
+    rgba(200,240,255,.9),
+    rgba(255,255,255,.4));
+}
+.selected-album-bubble {
+  width: 20px;
+}
+
+
+.album-bubble-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12pt;
+}
+
+
+
+
+
+
+
+
+
+.song-bubble-container {
+  position: relative;
+  float: left;
+  left: 0;
+  margin-left: calc(50% + 400px);
+  margin-top: 100%;
+  width: 900px;
+  height: 350px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 2.2s;
+  z-index: 0;
+} .song-bubble-inner {
+  position: relative;
+  display: inline-block;
+  top: 50px;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  border: 1px solid gray;
+  overflow: hidden;
+  transition: .2s;
+}
+/*rgb(14,255,219), rgb(89,130,252)*/
+a.song-bubble-inner:hover {
+  /*border: 3px solid rgb(255,171,8);*/
+  background-color: rgb(14,255,219);
+}
+.song-bubble {
+  background: rgb(43,43,43);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  font-size: 12pt;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+
+
+.deriv-bubble-container {
+  position: relative;
+  float: left;
+  left: 0;
+  margin-left: calc(50% + 400px);
+  margin-top: 80%;
+  margin-bottom: 50px;
+  width: 700px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 2.2s;
+  z-index: 2;
+}
+.deriv-bubble-inner {
+  position: relative;
+  display: inline-block;
+  top: 50px;
+  height: 130px;
+  width: 130px;
+  border-radius: 65px;
+  border: 1px solid gray;
+  overflow: hidden;
+}
+.deriv-bubble {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(2,12,28);
+  font-size: 10pt;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#logo-container {
+  clear: both;
+  position: fixed;
+  margin-left: 30px;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+} .logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background-image: url('/images/team-blue-logo.jpg');
+  background-size: 100%;
+}
+
+
+
+#designed-by-container {
+  clear: both;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+} .designed-by {
+  text-align: center;
+  font-size: 8pt;
+  color: gray;
+  transform: rotate(-90deg) translateY(10px);
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+
+
+/*@media screen and (min-width: 480px) {
+  body {
+    background: lightgreen;
+  }
+
+  .album-bubble {
+    position: relative;
+    display: inline-block;
+    margin-top: 20vh;
+
+    width: 24vw;
+    height: 24vw;
+    border-radius: 12vw;
+  }
+}
+@media all and (orientation:portrait) {
+  .album-bubble {
+    position: relative;
+    display: inline-block;
+    margin-top: 20vh;
+    width: 44vh;
+    height: 44vh;
+    border-radius: 22vh;
+  }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#landing-toggle-enclosure {
+  clear: both;
+  position: fixed;
+  top: 25px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc((100% / 2) - 25px);
+  width: 50px;
+  height: 25px;
+  z-index: 20;
+  transition: .5s;
+}
+.landing-toggle-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+.landing-button-line-norm {
+  position: relative;
+  float: left;
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+  background: gray;
+  border-radius: 10%;
+}
+.landing-button-line-buffer {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 35%;
+}
+.landing-button-line-mid {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 10%;
+  background: gray;
+  border-radius: 10%;
+}
+
+
+
+
+
+
+
+#land {
+  clear: both;
+  position: fixed;
+  width: 100%;
+  min-width: 700px;
+  height: 100%;
+  top: -100%;
+  transition: .5s;
+  z-index: 10;
+  background: rgb(43,43,43);
+}
+#land-main {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 150px);
+  top: 0;
+  background: linear-gradient(to bottom, rgb(14,255,219), rgb(89,130,252));
+  transition: .5s;
+} #land-main-logo {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-image: url('/images/deepdive-logo-shadow2-03.png');
+  background-size: 100%;
+  z-index: 21;
+}
+#land-main-search {
+  width: 100%;
+  height: 200px;
+  top: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#land-main-search-bubble {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  background: white;
+  color: gray;
+  font-size: 9pt;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+#land-bottom-banner {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
+  transition: .5s;
+}
