@@ -118,8 +118,10 @@ a {
   min-width: 800px;
   width: 100%;
   height: calc(100% - 150px);
-  background: rgb(2,12,28);
-  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
+  /*background: rgb(2,12,28);
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));*/
+  background: linear-gradient(to bottom, rgb(14,255,219), rgb(89,130,252));
+
   transition: .5s;
   overflow-x: scroll;
 }
@@ -280,7 +282,7 @@ a.song-bubble-inner:hover {
   position: fixed;
   margin-left: 30px;
   top: 0;
-  width: 100%;
+  width: 100px;
   height: 100px;
   z-index: 1;
   display: flex;
@@ -288,11 +290,13 @@ a.song-bubble-inner:hover {
   align-items: center;
   transition: .5s;
 } .logo {
-  width: 70px;
-  height: 70px;
+  position: relative;
+  float; left;
+  height: 100%;
+  width: 200px;;
   margin: 0 auto;
   top: 0;
-  /*background-image: url('/images/team-blue-logo.jpg');*/
+  background-image: url('/images/team-blue-logo.jpg');
   background-size: 100%;
 } .logo-gutter {
   position: relative;
@@ -334,6 +338,100 @@ a.song-bubble-inner:hover {
   width: 100px;
   height: 100px;
 }
+
+
+
+
+
+
+#land {
+  clear: both;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  transition: .5s;
+  z-index: 10;
+  background: linear-gradient(to top, rgb(89,130,252), rgb(14,255,219));
+
+}
+
+#land-main-enclosure {
+  position: fixed;
+  float: left;
+  width: 100%;
+  height: calc(100% - 150px);
+  background-image: url('/images/deepdive-logo-shadow2-03.png');
+  background-size: 100%;
+  background-repeat: none;
+}
+
+#land-top-banner {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  transition: .5s;
+  z-index: 30;
+}
+
+#land-main-body {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  transition: .5s;
+  z-index: 30;
+}
+
+#land-main-search-enclosure {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 200px%;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#land-main-search-enclosure {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100% - 200px);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#land-main-search-bubble {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  background: white;
+  color: gray;
+  font-size: 9pt;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#land-bottom-banner {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  top: calc(100% - 150px);
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
+  transition: .5s;
+}
+
+
+
 
 
 
@@ -434,34 +532,9 @@ a.song-bubble-inner:hover {
 
 
 
-#land {
-  clear: both;
-  position: fixed;
-  width: 100%;
-  min-width: 700px;
-  height: 100%;
-  top: -100%;
-  transition: .5s;
-  z-index: 10;
-  background: rgb(43,43,43);
-}
-#land-main {
-  position: relative;
-  width: 100%;
-  height: calc(100% - 150px);
-  top: 0;
-  background: linear-gradient(to bottom, rgb(14,255,219), rgb(89,130,252));
-  transition: .5s;
-} #land-main-logo {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-image: url('/images/deepdive-logo-shadow2-03.png');
-  background-size: 100%;
-  z-index: 21;
-}
+
+
+
 
 
 
@@ -480,28 +553,4 @@ a.song-bubble-inner:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#land-main-search-bubble {
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  background: white;
-  color: gray;
-  font-size: 9pt;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-#land-bottom-banner {
-  position: relative;
-  width: 100%;
-  height: 150px;
-  top: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7));
-  transition: .5s;
 }
